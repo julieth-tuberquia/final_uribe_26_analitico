@@ -1,3 +1,5 @@
+import pandas as pd
+
 from data.simuladorVentas import generar_ventas
 from data.simuladorEmpleados import generar_empleados
 
