@@ -12,7 +12,7 @@
 import random
 from datetime import datetime, timedelta
 
-def generar_empleados():
+def generar_empleados(numeroEmpleados):
 
      # simular una lista de vendedores o empleados
      vendedores = [
@@ -30,20 +30,23 @@ def generar_empleados():
      fechaInicio = datetime(2020,1,1)
 
      # generar los N empleados que me esten pidiendo
-     empleados = []
+     ListaEmpleados = []
 
-     for i in range(vendedores):
+     for i in range(numeroEmpleados):
 
           nombre = random.choice(vendedores)
 
-          empleados.append(
+          ListaEmpleados.append(
                {
                     "id": i + 1,
                     "nombre": nombre,
                     "salarioBase": random.choice(salarios),
                     "documento": random.randint(1000000000,1099999999),
                     "fechaIngreso": fechaInicio + timedelta(days=random.randint(0,1500))
-               }
+           
+              }
           )
+          return ListaEmpleados
 
-     return empleados
+
+    
