@@ -3,3 +3,38 @@ pandas==3.0.1
 python-dateutil==2.9.0.post0
 six==1.17.0
 tzdata==2025.3
+
+import pandas as pd
+
+from data.simuladorVentas import generar_ventas
+#from data.simuladorEmpleados import generar_empleados
+
+#print(generar_ventas(10))
+
+#print(generar_empleados())
+
+# si vamos a comenzar una rutina de ana litica con pandas priemro debo de hacer  es crear un 
+#dataframe  de los datos
+  
+# como crear un data frame desde una fuenta de datos simulados en el mismo python
+lista=generar_ventas(10)
+
+datosOrdenados=pd.DataFrame(lista)
+
+
+#paso para analisar este set de datos
+# 1. identificar/inspeccionar/asociar la informacion base de los datos
+print(datosOrdenados.head(7))
+print(datosOrdenados.tail())
+#print(datosOrdenados.shape)
+#print(datosOrdenados.columns)
+#print(datosOrdenados.dtypes)
+#print(datosOrdenados.info())
+#print(datosOrdenados.describe())
+
+# 2. limpiar/evaluar calidad de datos 
+
+
+#como crear un data frame desde un archivo de ecxel 
+#como crear undata frame desde un archivo CVS
+# como crear un data frame desde  el consumo de un api (JSON) 
